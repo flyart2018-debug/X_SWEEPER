@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SWEEPER</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="app">
+  <section id="select" class="screen active">
+    <header class="top">
+      <div class="kicker">SWEEPER / BATTLE SYSTEM</div>
+      <h1>SELECT SWEEPER</h1>
+    </header>
+    <main id="character-list" class="char-list"></main>
+    <button id="backBtn" class="back">BACK</button>
+  </section>
+
+  <section id="battle" class="screen">
+    <header class="battle-head">
+      <div class="fighter"><b id="pName">REN</b><div><span>HP</span><strong id="pHp">100 / 100</strong></div><div class="bar"><i id="pBar"></i></div></div>
+      <div class="turn">TURN <b id="turn">01</b></div>
+      <div class="fighter cpu"><b>CPU</b><div><strong id="eHp">100 / 100</strong><span>HP</span></div><div class="bar"><i id="eBar"></i></div></div>
+    </header>
+
+    <main class="battle-main">
+      <div class="field-wrap">
+        <div class="field-title"><span>BATTLE FIELD</span><b>5 × 5 GRID</b><em id="lineInfo">ATTACK LINE ↕ ↔ 3</em></div>
+        <div id="field" class="field"></div>
+      </div>
+
+      <section class="readout">
+        <div><span>COMBAT READOUT</span><b id="readout">隣接するマスをタップして移動。</b><small>DISTANCE <strong id="distance">4</strong>　 NEXT <strong id="next">MOVE</strong></small></div>
+        <div><span>BATTLE LOG</span><b id="log">BATTLE START</b></div>
+      </section>
+
+      <section class="motion">
+        <div class="motion-title"><span>CHARACTER MOTION</span><b id="motionName">REN / IDLE</b></div>
+        <div class="motion-stage"><div id="motionSprite" class="sprite"></div></div>
+      </section>
+
+      <section class="chips">
+        <div class="chips-head"><span>CHIP SELECT</span><button id="clearBtn">CLEAR</button></div>
+        <div id="chipsGrid" class="chips-grid"></div>
+      </section>
+    </main>
+  </section>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
